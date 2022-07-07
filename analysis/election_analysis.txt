@@ -8,15 +8,15 @@ County Votes:
 -------------------------
 Jefferson
 Percentage of total votes: 10.5%
-Total Votes: 38855
+Total Votes: 38,855
 -------------------------
 Denver
 Percentage of total votes: 82.8%
-Total Votes: 306055
+Total Votes: 306,055
 -------------------------
 Arapahoe
 Percentage of total votes: 6.7%
-Total Votes: 24801
+Total Votes: 24,801
 -------------------------
 SUMMARY: The county with the largest turnout was Denver with 306055 votes.
 -------------------------

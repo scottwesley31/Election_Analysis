@@ -111,7 +111,7 @@ with open(file_to_save, "w") as txt_file:
         f"-------------------------\n"
         f"{county}\n"
         f"Percentage of total votes: {vote_county_percent:.1f}%\n"
-        f"Total Votes: {vote_county_count}\n")
+        f"Total Votes: {vote_county_count:,}\n")
         print(county_results_2)
 
          # 6e: Save the county votes to a text file.
