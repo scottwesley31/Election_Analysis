@@ -55,15 +55,15 @@ This is the print statement code:
 
 #### Vote Count & Percentage of Total by County
 The vote count and percentage of the total vote for each county is as follows:
-  - Jefferson - 38,855 (10.5%)
-  - Denver - 306,055 (82.8%)
-  - Arapahoe - 24,801 (6.7%)
+  - **Jefferson - 38,855 (10.5%)**
+  - **Denver - 306,055 (82.8%)**
+  - **Arapahoe - 24,801 (6.7%)**
   
 This was accomplished by creating an empty county list and county votes dictionary as follows:
 
 ![county_results](https://user-images.githubusercontent.com/107309793/177763389-c0dcd842-cb33-4dcc-8eab-c30edc84597b.png)
 
-A conditional statement was utilized within the `For row in reader:` for loop screenshotted above (which references the election_results.csv) which appends the unique county names from the file to a list and generating a vote count by initializing the count to zero and incrementing by 1. This is done for each county. This is executed in the following code.
+A conditional statement was utilized within the `For row in reader:` for loop screenshotted above (references the election_results.csv). It appends the unique county names from the file to a list and also generates a vote count by initializing the count to zero and incrementing by 1. This is done for each county and executed in the following code.
  
   ![county_results_2](https://user-images.githubusercontent.com/107309793/177764654-0404fdfa-cebf-46c3-8f78-f190a3132d06.png)
   
@@ -71,7 +71,7 @@ The variable `county_name` was defined prior to this if statement and contains t
   
 At this point the county list is populated with the counties from the election_results.csv file (Jefferson, Denver, Arapahoe) and the county votes dictionary is populated with the total vote count for each county.
 
-The county votes dictionary is accessed in another for loop which retrives the vote count and assigns it to a variable `vote_county_count`, and uses this value and the `total_votes` variable to calculate the percentage of votes `vote_county_percent`.
+The county votes dictionary is accessed in another for loop which retrieves the vote count and assigns it to a variable (`vote_county_count`), and uses this value and the `total_votes` variable to calculate the percentage of votes (`vote_county_percent`).
 
 ![county_results_3](https://user-images.githubusercontent.com/107309793/177765715-421c3fd4-b6d8-4214-9e59-a9386238c48d.png)
 
@@ -85,13 +85,13 @@ This is the print statement code:
 
 #### Largest Vote Count by County
 
-The county that had the largest number of votes was Denver. This was accomplished by utilizing the same `for county in county_dict.keys()` for loop from before which references the `county_dict` dictionary containing the counties and their associated vote counts.
+The county that had the largest number of votes was **Denver**. This was accomplished by utilizing the same `for county in county_dict.keys()` for loop from before which references the `county_dict` dictionary containing the counties and their associated vote counts.
 
 2 empty variables were defined prior to using this loop which will later be populated with the winning county and it's number of votes.
 
 ![winning_county](https://user-images.githubusercontent.com/107309793/177767863-46b03d59-84b1-4b05-b3ac-bcc99a7373d9.png)
 
-A conditional statement within the for loop checks for when `vote_county_county > winning_votes`. While iterating through the `county_dict` dictionary, the code finds each county vote `vote_county_count` and checks to see if it is larger than the `winning_votes` variable (which starts at zero). Each time the for loop satisfies this condition, the `winning_county` string is updated with that county and the `winning_votes` is updated to the dictionary value with the highest count. Here's the code:
+A conditional statement within the for loop checks for when `vote_county_county > winning_votes`. While iterating through the `county_dict` dictionary, the code finds each county vote (`vote_county_count`) and checks to see if it is larger than the `winning_votes` variable (which starts at zero). Each time the for loop satisfies this condition, the `winning_county` string is updated with that county and the `winning_votes` is updated to the dictionary value with the highest count. Here's the code:
 
 ![winning_county_2](https://user-images.githubusercontent.com/107309793/177769154-8bfd03f7-2d29-465e-b421-3261c5e96c58.png)
 
@@ -102,6 +102,12 @@ A largest turnout summary is printed underneath the county details into the elec
 ![winning_county_3](https://user-images.githubusercontent.com/107309793/177770427-7d8e0d37-27f4-458a-824b-e9b754de2ef4.png)
 
 #### Vote Count & Percentage of Total by Candidate
+
+The candidate results were as follows:
+- **Charles Casper Stockham had 23.0% of the total vote (85,213 votes)**
+- **Diana DeGette had 73.8% of the total vote (272,892)**
+- **Raymon Anthony Doane had 3.1% of the total vote (11,606)***
+
 A conditional statement was utilized within the `For row in reader:` for loop which appends the unique candidate names from the election_results.csv file to a list and generates a vote count. The vote count is initiated to zero and incremented by 1.
 
 ![candidate_results_2](https://user-images.githubusercontent.com/107309793/177891156-0c52a018-8f37-4a4d-9fcf-be2751f5cea5.png)
