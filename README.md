@@ -41,7 +41,7 @@ Seth and Tom (Colorado Board of Education employees) requested additional inform
 ### Election-Audit Results:
 
 #### Total Votes
-A total of 369,711 votes were cast in this congressional election. This value was calculated by having the code read the election_results.csv file, skipping over the header, initializing a "total_votes" variable to zero, and incrementing this variable by 1 for every row.
+A total of 369,711 votes were cast in this congressional election. This value was calculated by having the code read the election_results.csv file, skipping over the header, initializing a `total_votes` variable to zero, and incrementing this variable by 1 for every row.
 
 ![image](https://user-images.githubusercontent.com/107309793/177759468-7730311f-91af-47ad-8d13-9d050105aa40.png)
 
