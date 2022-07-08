@@ -120,4 +120,17 @@ This is then printed to the terminal (and the election_analysis.txt text file).
 
 This is the print statement code:
 
-![candidate_results_4](https://user-images.githubusercontent.com/107309793/177892877-80498109-a8dd-4511-885e-68fb79e744ec.png)
+![candidate_results_5](https://user-images.githubusercontent.com/107309793/177893568-c5a82f86-8387-433e-a513-d642aa8e7915.png)
+
+- The candidate that won the election was Diana Degette with a vote count of 272,892 and percentage of 73.8% of the total votes. This was accomplished by utilizing the `for candidate_name in candidate_votes:` for loop from before which references the `candidate_votes` dictionary containing the candidates and their associated vote counts.
+
+2 empty variables were defined prior to using this loop which will later be populated with the winning candidate and it's number of votes.
+
+A conditional statement within the for loop checks for when `votes > winning_count `. While iterating through the `candidate_votes` dictionary, the code finds each candidate vote `votes` and checks to see if it is larger than the `winning_count` variable (which starts at zero). Each time the for loop satisfies this condition, the `winning_candidate` string is updated with that candidate and the `winning_count` is updated to the dictionary value with the highest count
+
+The 2nd half of this if statement `vote_percentage > winning_percentage` results in the `winning_percentage` equal to the highest vote percent when it iterates through the candidate votes dictionary.
+
+A winning candidate summary is printed into the election_analysis.txt file. With the following code:
+
+
+
