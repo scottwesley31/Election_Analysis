@@ -126,11 +126,18 @@ This is the print statement code:
 
 2 empty variables were defined prior to using this loop which will later be populated with the winning candidate and it's number of votes.
 
+![winning_candidate_results](https://user-images.githubusercontent.com/107309793/177895167-e12b6048-96af-453b-80ca-5dc68388e144.png)
+
 A conditional statement within the for loop checks for when `votes > winning_count `. While iterating through the `candidate_votes` dictionary, the code finds each candidate vote `votes` and checks to see if it is larger than the `winning_count` variable (which starts at zero). Each time the for loop satisfies this condition, the `winning_candidate` string is updated with that candidate and the `winning_count` is updated to the dictionary value with the highest count
 
 The 2nd half of this if statement `vote_percentage > winning_percentage` results in the `winning_percentage` equal to the highest vote percent when it iterates through the candidate votes dictionary.
 
+![winning_candidate_results_2](https://user-images.githubusercontent.com/107309793/177895242-0624a3d3-a1c1-404e-81b2-4a2a4aa7495b.png)
+
 A winning candidate summary is printed into the election_analysis.txt file. With the following code:
 
+![winning_candidate_results_3](https://user-images.githubusercontent.com/107309793/177895394-99b4375b-09ed-4fac-a437-785ee4e7eb5f.png)
 
+![Uploading image.png…]()
 
+![winning_candidate_results_4](https://user-images.githubusercontent.com/107309793/177895482-62d02528-1de9-48fc-b661-4c04fa81d2ea.png)
