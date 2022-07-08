@@ -39,7 +39,9 @@ Seth and Tom (Colorado Board of Education employees) requested additional inform
 
 ## Challenge Summary
 ### Election-Audit Results:
-- A total of 369,711 votes were cast in this congressional election. This value was calculated by having the code read the election_results.csv file, skipping over the head, initializing a "total_votes" variable to zero, and incrementing this variable by 1 for every row.
+
+#### Total Votes
+A total of 369,711 votes were cast in this congressional election. This value was calculated by having the code read the election_results.csv file, skipping over the head, initializing a "total_votes" variable to zero, and incrementing this variable by 1 for every row.
 
 ![image](https://user-images.githubusercontent.com/107309793/177759468-7730311f-91af-47ad-8d13-9d050105aa40.png)
 
@@ -51,7 +53,8 @@ This is the print statement code:
 
 ![total_votes_3](https://user-images.githubusercontent.com/107309793/177760419-ead2e80e-f36e-4ad5-a7aa-24b8a846a99c.png)
 
-- The vote count and percentage of the total vote for each county is as follows:
+#### Vote Count & Percentage of Total by County
+The vote count and percentage of the total vote for each county is as follows:
   - Jefferson - 38,855 (10.5%)
   - Denver - 306,055 (82.8%)
   - Arapahoe - 24,801 (6.7%)
@@ -80,7 +83,9 @@ This is the print statement code:
 
 ![county_results_4](https://user-images.githubusercontent.com/107309793/177765869-7062320e-494a-4119-a08f-716bb514d8c1.png)
 
-- The county that had the largest number of votes was Denver. This was accomplished by utilizing the same `for county in county_dict.keys()` for loop from before which references the `county_dict` dictionary containing the counties and their associated vote counts.
+#### Largest Vote Count by County
+
+The county that had the largest number of votes was Denver. This was accomplished by utilizing the same `for county in county_dict.keys()` for loop from before which references the `county_dict` dictionary containing the counties and their associated vote counts.
 
 2 empty variables were defined prior to using this loop which will later be populated with the winning county and it's number of votes.
 
@@ -96,12 +101,7 @@ A largest turnout summary is printed underneath the county details into the elec
 
 ![winning_county_3](https://user-images.githubusercontent.com/107309793/177770427-7d8e0d37-27f4-458a-824b-e9b754de2ef4.png)
 
-- There were 3 different candidates in this election - Charles Casper Stockham, who received 23.0% of the votes (85,213 votes), Diana DeGette, who received 73.8% of the votes (272,892), and Raymon Anthony, who received 3.1% of the votes (11,606). These values were obtained in a very similar fashion to the vote counts and vote percentages that were associated with each county.
-
-An empty candidate options list and candidates votes dictionary was created.
-
-![candidate_results](https://user-images.githubusercontent.com/107309793/177889753-7df51d00-a0ee-4915-837c-b4fcb0bdd616.png)
-
+#### Vote Count & Percentage of Total by Candidate
 A conditional statement was utilized within the `For row in reader:` for loop which appends the unique candidate names from the election_results.csv file to a list and generates a vote count. The vote count is initiated to zero and incremented by 1.
 
 ![candidate_results_2](https://user-images.githubusercontent.com/107309793/177891156-0c52a018-8f37-4a4d-9fcf-be2751f5cea5.png)
@@ -122,7 +122,9 @@ This is the print statement code:
 
 ![candidate_results_5](https://user-images.githubusercontent.com/107309793/177893568-c5a82f86-8387-433e-a513-d642aa8e7915.png)
 
-- The candidate that won the election was Diana Degette with a vote count of 272,892 and percentage of 73.8% of the total votes. This was accomplished by utilizing the `for candidate_name in candidate_votes:` for loop from before which references the `candidate_votes` dictionary containing the candidates and their associated vote counts.
+#### Winning Candidate Vote Count and Percent of Total
+
+The candidate that won the election was Diana Degette with a vote count of 272,892 and percentage of 73.8% of the total votes. This was accomplished by utilizing the `for candidate_name in candidate_votes:` for loop from before which references the `candidate_votes` dictionary containing the candidates and their associated vote counts.
 
 2 empty variables were defined prior to using this loop which will later be populated with the winning candidate and it's number of votes.
 
@@ -138,6 +140,14 @@ A winning candidate summary is printed into the election_analysis.txt file. With
 
 ![winning_candidate_results_3](https://user-images.githubusercontent.com/107309793/177895394-99b4375b-09ed-4fac-a437-785ee4e7eb5f.png)
 
-![Uploading image.png…]()
-
 ![winning_candidate_results_4](https://user-images.githubusercontent.com/107309793/177895482-62d02528-1de9-48fc-b661-4c04fa81d2ea.png)
+
+### Election-Audit Summary
+This script as it stands provides the information requested; specifications of the vote counts/percentages for the 3 candidates and 3 counties included on the election_results.csv file supplied. It also summarizes the county with the largest turnout and the candidate that won the election (by popular vote). If additional data is added to the CSV file under the same format (Ballot ID, County, Candidate), the results of this election can be reevaluated to include any additional candidate and/or counties.
+
+#### Modifications
+The provided election_results.csv file is currently limited to the 3 fields mentioned above. In another election, additional fields might have more significance. An example could be vote method. Did the voters submit their ballot by mail? In person? The same for loops described above could be applied to new fields to determine a count of vote method which could be determined by county (or candidate). Other fields such as political affiliation might also provide insight on the voter population.
+
+As long as the data provided in a future election includes U.S. states, this script could potentially be modified to include vote counts by state rather than county. It could have use in larger scale elections in this case. This would require a significantly larger election_results.csv file which could affect how well the code runs, but at a fundamental level (i.e. counting variables, performing calculations on vote count, etc.) should still work.
+
+
