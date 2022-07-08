@@ -108,10 +108,16 @@ A conditional statement was utilized within the `For row in reader:` for loop wh
 
 The `candidate_name` variable was defined first in this loop and contains the candidate names extracted from the election_results.csv file.
 
-[]At this point the county list is populated with the counties from the election_results.csv file (Jefferson, Denver, Arapahoe) and the county votes dictionary is populated with the total vote count for each county.
+At this point the candidate options list is populated with the 3 candidates from the election_results.csv file and the candidate votes dictionary is populated with the total vote count for each candidate.
 
-[]The county votes dictionary is accessed in another for loop which retrives the vote count and assigns it to a variable `vote_county_count`, and uses this value and the `total_votes` variable to calculate the percentage of votes `vote_county_percent`.
+The candidate votes dictionary is accessed in another for loop which retrives the vote count and assigns it to a variable `votes`, and uses this value and the `total_votes` variable to calculate the percentage of votes `vote_percentage`.
 
-[]This is then printed in a similar fashion to the election results to the terminal (and the election_analysis.txt text file).
+![candidate_results_3](https://user-images.githubusercontent.com/107309793/177892637-f44908ca-9f32-4d78-8f0c-c6e539d9a622.png)
 
-[]This is the print statement code:
+This is then printed to the terminal (and the election_analysis.txt text file).
+
+![candidate_results_4](https://user-images.githubusercontent.com/107309793/177892757-9e04c2c5-b2e1-4b22-b4ce-bb531b0d7da9.png)
+
+This is the print statement code:
+
+![candidate_results_4](https://user-images.githubusercontent.com/107309793/177892877-80498109-a8dd-4511-885e-68fb79e744ec.png)
