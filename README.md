@@ -108,6 +108,12 @@ The candidate results were as follows:
 - **Diana DeGette had 73.8% of the total vote (272,892)**
 - **Raymon Anthony Doane had 3.1% of the total vote (11,606)***
 
+These results were accomplished with a similar strategy to the vote count/percentage by county.
+
+An empty candidate options list and a candidate votes dictionary were defined.
+
+![candidate_results](https://user-images.githubusercontent.com/107309793/177915472-876d364d-b8ad-496f-ac01-4a5fef54b8ea.png)
+
 A conditional statement was utilized within the `For row in reader:` for loop which appends the unique candidate names from the election_results.csv file to a list and generates a vote count. The vote count is initiated to zero and incremented by 1.
 
 ![candidate_results_2](https://user-images.githubusercontent.com/107309793/177891156-0c52a018-8f37-4a4d-9fcf-be2751f5cea5.png)
@@ -116,7 +122,7 @@ The `candidate_name` variable was defined first in this loop and contains the ca
 
 At this point the candidate options list is populated with the 3 candidates from the election_results.csv file and the candidate votes dictionary is populated with the total vote count for each candidate.
 
-The candidate votes dictionary is accessed in another for loop which retrives the vote count and assigns it to a variable `votes`, and uses this value and the `total_votes` variable to calculate the percentage of votes `vote_percentage`.
+The candidate votes dictionary is accessed in another for loop which retrives the vote count and assigns it to a variable (`votes`), and uses this value and the `total_votes` variable to calculate the percentage of votes (`vote_percentage`).
 
 ![candidate_results_3](https://user-images.githubusercontent.com/107309793/177892637-f44908ca-9f32-4d78-8f0c-c6e539d9a622.png)
 
@@ -130,13 +136,13 @@ This is the print statement code:
 
 #### Winning Candidate Vote Count and Percent of Total
 
-The candidate that won the election was Diana Degette with a vote count of 272,892 and percentage of 73.8% of the total votes. This was accomplished by utilizing the `for candidate_name in candidate_votes:` for loop from before which references the `candidate_votes` dictionary containing the candidates and their associated vote counts.
+The candidate that won the election was ***Diana Degette*** with a vote count of 272,892 and percentage of 73.8% of the total votes. This was accomplished by utilizing the `for candidate_name in candidate_votes:` for loop from before which references the `candidate_votes` dictionary containing the candidates and their associated vote counts.
 
 2 empty variables were defined prior to using this loop which will later be populated with the winning candidate and it's number of votes.
 
 ![winning_candidate_results](https://user-images.githubusercontent.com/107309793/177895167-e12b6048-96af-453b-80ca-5dc68388e144.png)
 
-A conditional statement within the for loop checks for when `votes > winning_count `. While iterating through the `candidate_votes` dictionary, the code finds each candidate vote `votes` and checks to see if it is larger than the `winning_count` variable (which starts at zero). Each time the for loop satisfies this condition, the `winning_candidate` string is updated with that candidate and the `winning_count` is updated to the dictionary value with the highest count
+A conditional statement within the for loop checks for when `votes > winning_count `. While iterating through the `candidate_votes` dictionary, the code finds each candidate vote (`votes`) and checks to see if it is larger than the `winning_count` variable (which starts at zero). Each time the for loop satisfies this condition, the `winning_candidate` string is updated with that candidate and the `winning_count` is updated to the dictionary value with the highest count
 
 The 2nd half of this if statement `vote_percentage > winning_percentage` results in the `winning_percentage` equal to the highest vote percent when it iterates through the candidate votes dictionary.
 
